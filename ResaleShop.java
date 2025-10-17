@@ -13,9 +13,6 @@ public class ResaleShop {
      */
     public ResaleShop() {
         this.inventory = new ArrayList<>();
-        Computer newComputer = new Computer("2019 MacBook Pro", "Intel", 256, 16, "High Sierra", 2019, 1000);
-        this.inventory.add(newComputer);
-
     }
 
     /**
@@ -24,8 +21,11 @@ public class ResaleShop {
      * @throws Exception if computer is already in inventory  
      */
     public void buy(Computer newComputer) throws Exception {
-        newComputer = new Computer("2019 MacBook Pro", "Intel", 256, 16, "High Sierra", 2019, 1000);
-        this.inventory.add(newComputer); 
+        if(inventory.contains(newComputer)){
+            throw new Exception();
+        }else{
+            this.inventory.add(newComputer); 
+        }
     }
 
     /**
@@ -34,7 +34,10 @@ public class ResaleShop {
      * @throws Exception if computer is not in inventory 
      */
     public void sell(Computer comp) throws Exception {
-        this.inventory.remove(comp); 
+        if(!inventory.contains(comp))
+            throw new Exception();
+        else
+            this.inventory.remove(comp); 
     }
 
     /**
@@ -44,7 +47,7 @@ public class ResaleShop {
         if (inventory.isEmpty()) {
             System.out.println("Inventory is empty");
         } else {
-            for (int i = 0; i <= this.inventory.size(); i++){
+            for (int i = 0; i < this.inventory.size(); i++){
                 System.out.println(inventory.get(i));
             }
         }

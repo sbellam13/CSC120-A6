@@ -27,10 +27,10 @@ public class Computer {
         this.description = description;
         this.processorType = processorType;
         this.hardDriveCapacity = hardDriveCapacity;
-        this.memory = 16;
+        this.memory = memory;
         this.operatingSystem = operatingSystem;
         this.yearMade = yearMade;
-        this.price = 0;
+        this.price = price;
     }
 
     /**
@@ -46,7 +46,7 @@ public class Computer {
      * @param newOS new OS
      */
     public void setOS(String newOS) {
-        this.operatingSystem = "None"; 
+        this.operatingSystem = newOS; 
     }
 
     /**
