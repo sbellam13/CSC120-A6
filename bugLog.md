@@ -15,7 +15,7 @@ Brief description:  The sell method does not thrown an error when trying to sell
 Failed unit test: testSellComputerNotInStore
 
 ## Bug 5
-Brief description:  The inventory method throws an IndexOutOfBoundsError
+Brief description:  The printInventory method throws an IndexOutOfBoundsError
 Failed unit test: testInventory
 
 ## Bug 6
